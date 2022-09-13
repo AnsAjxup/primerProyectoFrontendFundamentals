@@ -18,7 +18,7 @@ header{
     width: 100%;
     height: 100%;
 }
-h1{
+h2{
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     color: #F8971D;
@@ -26,7 +26,7 @@ h1{
     font-weight: 700;
     text-decoration: underline overline dotted 3px;
 }
-h2{
+h3{
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     text-align: center;
@@ -41,17 +41,12 @@ p{
 .section-games{
     background-image: url(./img/halo-wallpaper2.jpg);
     background-size: cover;
-    padding: 25px;
-}
-.title-section-games{
-    color: #0C0C0C;
+    padding: 35px;
 }
 .container-cards{
-    margin: 0 auto;
-    display: flex;
+    margin: 10px auto 0;
     width: 900px;
-    flex-wrap: wrap;
-    justify-content: center;
+
 }
 .card-game{
     width: 250px;
@@ -60,6 +55,7 @@ p{
     background-size: cover;
     border-radius: 15px;
     margin: 20px;
+    display: inline-block;
 }
 .card-hover{
     width: 250px;
@@ -67,18 +63,22 @@ p{
     padding: 20px 12px;
     background-color: #113643cb;
     border-radius: inherit;
-    display: none;
-    transition: 2s;
+    visibility: hidden;
+}
+.title-section-games{
+    text-shadow: 0 0 1px #0C0C0C;
 }
 .description-game{
     margin-top: 10px;
 }
 .card-game:hover .card-hover{
-    display: block;
+    visibility: visible;
+    box-shadow: 0 6px 20px 0 #FBAF59;
+    backdrop-filter: blur( 2.5px );
 }
 .section-characters{
     width: 100%;
-    height: 500px;
+    padding: 35px;
 }
 .card-character{
     width: 250px;
@@ -86,17 +86,23 @@ p{
     border-radius: 15px;
     margin: 20px;
     background-color: #113643;
+    display: inline-block;
 }
 .card-character:hover{
-    box-shadow: 0 8px 32px 0 rgba( 17, 54, 67, 0.8  );
-    backdrop-filter: blur( 9.5px );
-    -webkit-backdrop-filter: blur( 9.5px );
+    box-shadow: 0 8px 32px 0 #113643cc;
 }
 .img-character{
     width: 250px;
     height: 120px;
     border-radius: 15px 15px 0 0;
 }
+/* .btn-title-character{
+    width: 200px;
+    border-radius: 15px;
+    position: absolute;
+    top:-25px;
+    left: 25px;
+} */
 .link-title-character{
     text-decoration: none;
 }
@@ -110,4 +116,23 @@ p{
 .description-character{
     margin: 0 12px;
     font-size: 14px;
+}
+.card-vehicle{
+    width: 600px;
+    height: 250px;
+    background-color: #113643;
+    border-radius: 15px;
+}
+.img-vehicle{
+    width: 250px;
+    height: 250px;
+    border-radius: 15px 0 0 15px;
+    float: left;
+    object-fit: cover;
+}
+.description-vehicle{
+    width: 350px;
+    float: right;
+    padding: 10px;
+    
 }
